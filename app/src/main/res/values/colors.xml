@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="calculations_color_primary_alt">#006BAF</color>
-    <color name="calculations_checkable_card_view_check_icon_color">#FFF</color>
+    <color name="color_primary">#D41162</color>
+    <color name="checkable_card_view_check_icon_color">#FFF</color>
 
 </resources>
