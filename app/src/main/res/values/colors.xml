@@ -10,5 +10,6 @@
 
     <color name="color_primary">#D41162</color>
     <color name="checkable_card_view_check_icon_color">#FFF</color>
+    <color name="checkable_card_view_uncheck_icon_color">#DCE5EA</color>
 
 </resources>

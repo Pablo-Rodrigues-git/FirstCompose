@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
@@ -28,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    CardWithCheckable()
                 }
             }
         }
@@ -36,7 +35,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun CardWithCheckable() {
     var selecionada =  remember { mutableStateOf(false) }
     val imagem = if (selecionada.value) {
         painterResource(id = R.drawable.ic_check_filled)
@@ -50,13 +49,13 @@ fun Greeting(name: String) {
     ) {
         Image(
             painter = painterResource(id = R.drawable.frame__5_),
-            contentDescription = "Produto",
+            contentDescription = "Prodct",
             modifier = Modifier
                 .size(56.dp)
                 .padding(end = 8.dp))
 
         Column() {
-            Text(text = "Título")
+            Text(text = "Title")
             Text(text = "R$ 70,00")
         }
         
@@ -65,7 +64,7 @@ fun Greeting(name: String) {
         }) {
             Image(
                 painter = imagem,
-                contentDescription = "Botão de Seleção",
+                contentDescription = "Checkable Icon",
                 modifier = Modifier.size(32.dp)
             )
         }
@@ -74,8 +73,16 @@ fun Greeting(name: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun CardSelected() {
     FirstComposeTheme {
-        Greeting("Android")
+        CardWithCheckable()
     }
 }
+
+//@Preview(showBackground = true)
+//@Composable
+//fun CardUnselected() {
+//    FirstComposeTheme {
+//        CardWithCheckable()
+//    }
+//}
