@@ -55,8 +55,8 @@ fun CardWithCheckable() {
                 .padding(end = 8.dp))
 
         Column() {
-            Text(text = "Title")
-            Text(text = "R$ 70,00")
+            Text(text = "Your Score")
+            Text(text = "998 Points")
         }
         
         IconButton(onClick = {
