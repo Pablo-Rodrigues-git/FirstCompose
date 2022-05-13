@@ -78,5 +78,4 @@ fun DefaultPreview() {
     FirstComposeTheme {
         Greeting("Android")
     }
-
 }
